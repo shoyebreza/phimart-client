@@ -1,5 +1,4 @@
 
-import './App.css'
 import List from './components/list'
 import FirstComponent from './FirstComponent'
 

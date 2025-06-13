@@ -3,7 +3,7 @@ const List = () => {
     const fruits = ['Apple','Banana','Orange','Grapes','Mango','Pineapple'];
     return (
         <div>
-            <ul>
+            <ul className="pl-6 list-disc">
                 {fruits.map((fruit)=>(
                     <li key={fruit}>{fruit}</li>
                 ))}
