@@ -1,8 +1,8 @@
 import { useState } from "react";
-
+import { CircleX } from 'lucide-react';
 
 // eslint-disable-next-line react/prop-types
-const Alert = ({color='info', children}) => {
+const Alert = ({color='info', children,onClose}) => {
     const [visible, setVisible] = useState(true);
     const alertStyle = {
         success: "bg-green-100 text-green-700 border-green-500",
@@ -14,7 +14,7 @@ const Alert = ({color='info', children}) => {
     return (
         <div className={`flesx items-center justify-between rounded-sm p-4 m-5 ${alertStyle[color]}`}>
             <span>{children}</span>
-            <button className="text-red-500" onClick={()=> setVisible(false)}>  X </button>
+            <button className="text-red-500" onClick={()=>onClose()}> <CircleX /> </button>
         </div>
     );
 };

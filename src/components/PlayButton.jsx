@@ -12,7 +12,7 @@ const PlayButton = () => {
     return (
         <div>
             {alertVisible && (
-                <Alert color="success">You have clicked me</Alert>
+                <Alert color="success" onClose={()=>setAlertVisible(false)}>You have clicked me</Alert>
             )}
             
             <Button handleClick={()=> setAlertVisible(true)}>Click Me</Button>
