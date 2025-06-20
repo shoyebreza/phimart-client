@@ -1,11 +1,12 @@
-import PlayButton from "./components/PlayButton";
+import Person from "./components/Person";
+
 
 
 function App() {
   
   return (
     <>
-      <PlayButton></PlayButton>
+      <Person></Person>
     </>
   );
 };
