@@ -1,4 +1,5 @@
-import Person from "./components/Person";
+import Skills from "./components/Skills";
+
 
 
 
@@ -6,7 +7,7 @@ function App() {
   
   return (
     <>
-      <Person></Person>
+      <Skills></Skills>
     </>
   );
 };
