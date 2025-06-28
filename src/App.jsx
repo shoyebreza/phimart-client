@@ -1,4 +1,5 @@
-import Effect from "./components/Effect";
+import Apifetch from "./components/Apifetch";
+
 
 
 
@@ -7,7 +8,7 @@ function App() {
   
   return (
     <div className="m-5">
-        <Effect/>
+        <Apifetch/>
     </div>
   );
 };
