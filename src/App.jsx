@@ -8,9 +8,6 @@ function App() {
   return (
     <div className="m-5">
         <Effect/>
-        <Effect/>
-        <Effect/>
-        <Effect/>
     </div>
   );
 };
