@@ -1,5 +1,4 @@
-import Apifetch from "./components/Apifetch";
-
+import Axiosfetch from "./components/Axiosfetch";
 
 
 
@@ -8,7 +7,7 @@ function App() {
   
   return (
     <div className="m-5">
-        <Apifetch/>
+        <Axiosfetch/>
     </div>
   );
 };
