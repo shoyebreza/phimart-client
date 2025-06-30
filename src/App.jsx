@@ -1,4 +1,5 @@
-import Axiosfetch from "./components/Axiosfetch";
+import Form from "./components/Form";
+
 
 
 
@@ -7,7 +8,7 @@ function App() {
   
   return (
     <div className="m-5">
-        <Axiosfetch/>
+      <Form/>
     </div>
   );
 };
