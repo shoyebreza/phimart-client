@@ -1,7 +1,4 @@
-import HookForm from "./components/HookForm";
-
-
-
+import CartApp from "./cart/CartApp";
 
 
 function App() {
@@ -9,7 +6,7 @@ function App() {
   
   return (
     <div className="m-5">
-      <HookForm/>
+      <CartApp/>
     </div>
   );
 };
