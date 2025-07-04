@@ -26,6 +26,34 @@ const CartApp = () => {
         ]);
       }
     };
+
+    // increase quantity 
+
+    const increase = (name)=>{
+        setCart(
+            cart.map((item)=> 
+                item.name ===name ? { ...item, quantity : item.quantity + 1 } : item
+            )
+        );
+    };
+
+    // decrease quantity 
+
+    const decrease = (name)=>{
+        setCart(
+            cart.map((item)=> 
+                item.name ===name ? { ...item, quantity : item.quantity - 1 } : item
+            )
+        );
+    };
+
+    //remove item 
+
+    const remove = (name) =>{
+        setCart(cart.filter(item => item.name != name));
+    };
+
+
     return (
         <div className="w-1/3 mx-auto bg-gray-100 rounded-lg p-6 shadow-md">
             <form action="" onSubmit={handleSubmit(addItem)}>
@@ -43,11 +71,11 @@ const CartApp = () => {
                             <p>{(item.price * item.quantity).toFixed(2)}</p>
 
                             <div className="flex items-center">
-                                <button className="bg-red-500 text-white px-2 py-1 rounded">-</button>
+                                <button onClick={()=> decrease(item.name)} className="bg-red-500 text-white px-2 py-1 rounded">-</button>
                                 <span className="mx-2"> {item.quantity} </span>
-                                <button  className="bg-green-500 text-white px-2 py-1 rounded">+</button>
+                                <button onClick={()=> increase(item.name)} className="bg-green-500 text-white px-2 py-1 rounded">+</button>
                             </div>
-                            <button><Trash2/></button>
+                            <button onClick={()=> remove(item.name)} className="text-red-500"><Trash2/></button>
                         </div>
                     ))}
                     <div className="mt-4 font-black text-large"> Total Price: 100 </div>
