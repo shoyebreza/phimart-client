@@ -53,6 +53,12 @@ const CartApp = () => {
         setCart(cart.filter(item => item.name != name));
     };
 
+    // calculate total price 
+
+    const totalPrice = cart.reduce(
+        (total, item)=> total + item.price * item.quantity, 0
+    );
+
 
     return (
         <div className="w-1/3 mx-auto bg-gray-100 rounded-lg p-6 shadow-md">
@@ -78,7 +84,7 @@ const CartApp = () => {
                             <button onClick={()=> remove(item.name)} className="text-red-500"><Trash2/></button>
                         </div>
                     ))}
-                    <div className="mt-4 font-black text-large"> Total Price: 100 </div>
+                    <div className="mt-4 font-black text-large"> Total : {totalPrice.toFixed(2)} </div>
                 </div>
             ) : (
                 <p>No cart item</p>
